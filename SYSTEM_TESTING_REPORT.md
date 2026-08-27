@@ -14,10 +14,10 @@
 
 | No. | Student Name | Student ID | Responsibility |
 |---|---|---|---|
-| 1 | [Mania Sultana] | [011212038] | Authentications,Restaruants, Orders  |
-| 2 | [Taspia Akter Epou] | [011212163] | Orders, Rating |
-| 3 | [Sumaiya Islam Ety] | [011212164] | Orders-Claim |
-| 4 | [Joysree Bardhan] | [011221189] | Restaruants-menu-item ,id |
+| 1 | Mania Sultana | 011212038 | Authentications,Restaruants, Orders  |
+| 2 | Taspia Akter Epou| 011212163 | Orders, Rating |
+| 3 | Sumaiya Islam Ety | 011212164 | Orders-Claim |
+| 4 | Joysree Bardhan | 011221189 | Restaruants-menu-item ,Id |
 
 ## 1.2 Individual Contribution
 
@@ -73,20 +73,20 @@ The testing included:
 
 | Test Case ID | Test Case | Endpoint | Expected Status | Actual Status | Verdict |
 |---|---|---|---:|---:|---|
-| TC-01 | Register new user | POST/{{baseUrl}}/auth/register | 200 | 200 | PASS|
-| TC-02 | Register User Already Exists | POST/{{baseUrl}}/auth/register | 409 | 409  | PASS|
-| TC-03 | Register User type |  POST/{{baseUrl}}/auth/register | 400 | 400 | PASS |
-| TC-04 | Register User role remove |  POST/{{baseUrl}}/auth/register | 400 | 400 | PASS |
-| TC-05 | Register User password short |  POST/{{baseUrl}}/auth/register | 400 | 400 | PASS |
-| TC-06 | Login User | Post/{{baseUrl}}/auth/login  | 200 | 200| PASS |
-| TC-07 | Login User wrong pass | Post/{{baseUrl}}/auth/login | 401 | 401 | PASS/Fail |
-| TC-08 | Login User not exist |  Post/{{baseUrl}}/auth/login | 401 | 401 | PASS/Fail |
-| TC-09| Login User Missing Credentials|  Post/{{baseUrl}}/auth/login  | 400 | 400 | PASS/Fail |
-| TC-10| Get all Restaruants| GET/{{baseUrl}}/restaurants  | 200| 200 | PASS|
-| TC-11| Create Restaruants | POST/{{baseUrl}}/restaurants  | 201| 201 | PASS|
-| TC-12| Get all Restaruants ID | GET/{{baseUrl}}/restaurants  | 200| 200 | PASS|
-| TC-13| Get all Restaruants ID No token | GET/{{baseUrl}}/restaurants/e1c1c98f-f852-4670-886d-fece05da2099  | 401| 401 | PASS|
-| TC-14| Get all Restaruants ID No Found | GET/{{baseUrl}}/restaurants/00000000-0000-0000-0000-000000000000 | 404| 404 | PASS|
+|606d45 | Register new user | POST/{{baseUrl}}/auth/register | 200 | 200 | PASS|
+|a34a7d | Register User Already Exists | POST/{{baseUrl}}/auth/register | 409 | 409  | PASS|
+|35f18b | Register User type |  POST/{{baseUrl}}/auth/register | 400 | 400 | PASS |
+|3dad9f | Register User role remove |  POST/{{baseUrl}}/auth/register | 400 | 400 | PASS |
+|8fdec1 | Register User password short |  POST/{{baseUrl}}/auth/register | 400 | 400 | PASS |
+|78bc4d | Login User | Post/{{baseUrl}}/auth/login  | 200 | 200| PASS |
+|44d8d8 | Login User wrong pass | Post/{{baseUrl}}/auth/login | 401 | 401 | PASS/Fail |
+|f90a8d | Login User not exist |  Post/{{baseUrl}}/auth/login | 401 | 401 | PASS/Fail |
+|e98500 | Login User Missing Credentials|  Post/{{baseUrl}}/auth/login  | 400 | 400 | PASS/Fail |
+|aed6dc | Get all Restaruants| GET/{{baseUrl}}/restaurants  | 200| 200 | PASS|
+|7eb0d7 | Create Restaruants | POST/{{baseUrl}}/restaurants  | 201| 201 | PASS|
+|b3e003 | Get all Restaruants ID | GET/{{baseUrl}}/restaurants  | 200| 200 | PASS|
+| f9fdde| Get all Restaruants ID No token | GET/{{baseUrl}}/restaurants/e1c1c98f-f852-4670-886d-fece05da2099  | 401| 401 | PASS|
+|3338b0 | Get all Restaruants ID No Found | GET/{{baseUrl}}/restaurants/00000000-0000-0000-0000-000000000000 | 404| 404 | PASS|
 | TC-15| Get all Restaruants Open status | PATCH/{{baseUrl}}/restaurants/e1c1c98f-f852-4670-886d-fece05da2099 | 201| 201| PASS|
 | TC-16| Get all Restaruants menu Item | POST/{{baseUrl}}/restaurants/e1c1c98f-f852-4670-886d-fece05da2099/menu | 201| 201| PASS| 
 | TC-17| Restaruants ID Missing Token | PATCH/{{baseUrl}}/restaurants/e1c1c98f-f852-4670-886d-fece05da2099 | 401| 401| PASS|
@@ -113,6 +113,7 @@ The testing included:
 | TC-38| restaruant customer rating check  sort by ASC | GEt/{{baseUrl}}/orders/c3969e61-5e30-4bb9-a711-6e586ee00c7b/rate| 200| 200| PASS|
 | TC-39| restaruant customer rating check  sort by DESC&  value | GEt/{{baseUrl}}/orders/c3969e61-5e30-4bb9-a711-6e586ee00c7b/rate| 200| 200| PASS|
 | TC-40| restaruant customer rating check  sort by DESC&   wrong value | GEt/{{baseUrl}}/orders/c3969e61-5e30-4bb9-a711-6e586ee00c7b/rate| 400| 400| PASS|
+
 
 
 
