@@ -121,6 +121,29 @@ The testing included:
 |76f9a8 | invalidFilter timeline | GET/{{baseUrl}}/orders/50223eb1-bb33-49ad-87b8-4be3b58ad897/timeline/?filter_field=status| 400 | 400 | PASS|
 |9a741c | orderId NotFound | GET/{{baseUrl}}/orders/50223eb1-bb33-49ad-87b8-4be3b58ad898/timeline| 404 | 404 | PASS|
 |2b359f | Timeline missingToken | GET/{{baseUrl}}/orders/50223eb1-bb33-49ad-87b8-4be3b58ad897/timeline | 401 | 401 | PASS|
+|c52c00 |token missing | GET/{{baseUrl}}/orders/be89cdf4-d0ef-4fa0-8d16-53ef0f024cd5 | 401 | 401 | PASS|
+|82d084 |error customerOrder | GET/{{baseUrl}}/orders/45304403-7e7b-482f-aef6-696c12c2c140 | 200 | 200 | PASS|
+|e1c26c |order notFound | GET/{{baseUrl}}/orders/be89cdf4-d0ef-4fa0-8d16-53ef0f024cd6 | 404 | 404 | PASS|
+|73f52b |invalid filterValue | GET/{{baseUrl}}/orders?filter_field=status| 400 | 400 | PASS|
+|2caa32 |missingToken | GET/{{baseUrl}}/orders| 401 | 401 | PASS|
+|e19055 |stock out | POST/{{baseUrl}}/orders| 400 | 400 | PASS|
+|33a89d |restaurant notfound | POST/{{baseUrl}}/orders| 404 | 404 | PASS|
+|4c19e4 |id and items | POST/{{baseUrl}}/orders| 400 | 400 | PASS|
+|3ea1e4 |Non customer | POST/{{baseUrl}}/orders| 401 | 401 | PASS|
+|ce7852 |ordertoken missing | POST/{{baseUrl}}/orders| 401 | 401 | PASS|
+|9662f4 |restaurant open | PATCH/{{baseUrl}}/restaurants/e1c1c98f-f852-4670-886d-fece05da2099| 200 | 200 | PASS|
+|5527b7 |customer rating | POST/{{baseUrl}}/orders/c3969e61-5e30-4bb9-a711-6e586ee00c7b/rate| 201 | 201 | PASS|
+|5527b7 |already rated | POST/{{baseUrl}}/orders/c3969e61-5e30-4bb9-a711-6e586ee00c7b/rate| 201 | 201 | PASS|
+|db4d88 |rating score | POST/{{baseUrl}}/orders/a729e739-b14e-4938-9043-2ee8895f447a/rate| 400 | 400 | PASS|
+|a638e0 |only customer rating | POST/{{baseUrl}}/orders/c3969e61-5e30-4bb9-a711-6e586ee00c7b/rate| 403 | 403 | PASS|
+|c0b04a |order notFound | POST/{{baseUrl}}/orders/c3969e61-5e30-4bb9-a711-6e586ee00c6b/rate| 404 | 404 | PASS|
+|6366c2 |missing token | POST/{{baseUrl}}/orders/c3969e61-5e30-4bb9-a711-6e586ee00c7b/rate| 401 | 401 | PASS|
+
+
+
+
+
+
 
 
 
