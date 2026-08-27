@@ -113,7 +113,17 @@ The testing included:
 |d1a2ce | restaruant customer rating check  sort by ASC | GEt/{{baseUrl}}/orders/c3969e61-5e30-4bb9-a711-6e586ee00c7b/rate| 200| 200| PASS|
 |e07de0 | restaruant customer rating check  sort by DESC&  value | GEt/{{baseUrl}}/orders/c3969e61-5e30-4bb9-a711-6e586ee00c7b/rate| 200| 200| PASS|
 |b367cf | restaruant customer rating check  sort by DESC&   wrong value | GEt/{{baseUrl}}/orders/c3969e61-5e30-4bb9-a711-6e586ee00c7b/rate| 400| 400| PASS|
-|32bf3d | Register new user | POST/{{baseUrl}}/auth/register | 200 | 200 | PASS|
+|32bf3d | newCustomer reg | POST/{{baseUrl}}/auth/register | 200 | 200 | PASS|
+|a23188 | order valid | POST/{{baseUrl}}/orders | 201 | 201 | PASS|
+|29b044 | Get all orders | GET/{{baseUrl}}/orders | 200 | 200 | PASS|
+|4e663b | single order | GET/{{baseUrl}}/orders/50223eb1-bb33-49ad-87b8-4be3b58ad897| 200 | 200 | PASS|
+|4e663b | orderId Timeline | GET/{{baseUrl}}/orders/50223eb1-bb33-49ad-87b8-4be3b58ad897/timeline| 200 | 200 | PASS|
+|76f9a8 | invalidFilter timeline | GET/{{baseUrl}}/orders/50223eb1-bb33-49ad-87b8-4be3b58ad897/timeline/?filter_field=status| 400 | 400 | PASS|
+|9a741c | orderId NotFound | GET/{{baseUrl}}/orders/50223eb1-bb33-49ad-87b8-4be3b58ad898/timeline| 404 | 404 | PASS|
+|2b359f | Timeline missingToken | GET/{{baseUrl}}/orders/50223eb1-bb33-49ad-87b8-4be3b58ad897/timeline | 401 | 401 | PASS|
+
+
+
 
 
 
