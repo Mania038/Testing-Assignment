@@ -14,10 +14,10 @@
 
 | No. | Student Name | Student ID | Responsibility |
 |---|---|---|---|
-| 1 | [Mania Sultana] | [011212038] | [Authentications,Restaruants, Orders ] |
-| 2 | [Taspia Akter Epou] | [011212163] | [Orders, Rating] |
-| 3 | [Sumaiya Islam Ety] | [011212164] | [Restaruants-menu,id] |
-| 4 | [Joysree Bardhan] | [011221189] | [Orders-Claim] |
+| 1 | [Mania Sultana] | [011212038] | Authentications,Restaruants, Orders  |
+| 2 | [Taspia Akter Epou] | [011212163] | Orders, Rating |
+| 3 | [Sumaiya Islam Ety] | [011212164] | Orders-Claim |
+| 4 | [Joysree Bardhan] | [011221189] | Restaruants-menu-item ,id |
 
 ## 1.2 Individual Contribution
 
@@ -120,4 +120,117 @@ The testing included:
 
 ## 4.2 Detailed Test Cases
 
+### TC-01 — Register New User
 
+**Endpoint:** `POST /{{baseUrl}}/auth/register`
+
+**Purpose:** Verify that a new user can be registered successfully.
+
+**Test Data:**
+- Valid name
+- Valid email
+- Valid password
+- Valid user type
+
+**Steps:**
+1. Open the Register User request in Postman.
+2. Enter valid registration data.
+3. Send the request.
+4. Check the response status and response body.
+
+**Expected Result:**
+- Status code: `200`
+- User registration should be successful.
+
+**Actual Result:**
+- Status code: `200`
+- Request was processed successfully.
+
+**Verdict:** PASS
+
+**Evidence:**  
+![TC-01 Register New User](screenshots/TC-01.png)
+
+---
+
+### TC-02 — Register User Already Exists
+
+**Endpoint:** `POST /{{baseUrl}}/auth/register`
+
+**Purpose:** Verify that the system rejects registration when the email already exists.
+
+**Steps:**
+1. Open the Register User request.
+2. Use an email that is already registered.
+3. Send the request.
+4. Check the response.
+
+**Expected Result:**
+- Status code: `409`
+- Error should indicate that the email is already in use.
+
+**Actual Result:**
+- Status code: `409`
+- Error message: `Email already in use`
+
+**Verdict:** PASS
+
+**Evidence:**  
+![TC-02 Register User Already Exists](screenshots/TC-02.png)
+
+---
+
+### TC-03 — Register User Type
+
+**Endpoint:** `POST /{{baseUrl}}/auth/register`
+
+**Purpose:** Verify that the system validates the user type.
+
+**Expected Result:**
+- Status code: `400`
+
+**Actual Result:**
+- Status code: `400`
+
+**Verdict:** PASS
+
+**Evidence:**  
+![TC-03 Register User Type](screenshots/TC-03.png)
+
+---
+
+### TC-04 — Register User Role Remove
+
+**Endpoint:** `POST /{{baseUrl}}/auth/register`
+
+**Purpose:** Verify the registration request when the required role information is removed.
+
+**Expected Result:**
+- Status code: `400`
+
+**Actual Result:**
+- Status code: `400`
+
+**Verdict:** PASS
+
+**Evidence:**  
+![TC-04 Register User Role Remove](screenshots/TC-04.png)
+
+---
+
+### TC-05 — Register User Password Short
+
+**Endpoint:** `POST /{{baseUrl}}/auth/register`
+
+**Purpose:** Verify that the system rejects a password that is too short.
+
+**Expected Result:**
+- Status code: `400`
+
+**Actual Result:**
+- Status code: `400`
+
+**Verdict:** PASS
+
+**Evidence:**  
+![TC-05 Register User Password Short](screenshots/TC-05.png)
