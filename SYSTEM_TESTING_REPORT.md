@@ -138,7 +138,8 @@ The testing included:
 |a638e0 |only customer rating | POST/{{baseUrl}}/orders/c3969e61-5e30-4bb9-a711-6e586ee00c7b/rate| 403 | 403 | PASS|
 |c0b04a |order notFound | POST/{{baseUrl}}/orders/c3969e61-5e30-4bb9-a711-6e586ee00c6b/rate| 404 | 404 | PASS|
 |6366c2 |missing token | POST/{{baseUrl}}/orders/c3969e61-5e30-4bb9-a711-6e586ee00c7b/rate| 401 | 401 | PASS|
-|df9e39 |restaurant menu id | POST/{{baseUrl}}/restaurants/e11c98f-f852-4670-886d-fece05da2099/menu| 400 | 500 | Fail|
+|df9e39 |restaurant menu id BUG | POST/{{baseUrl}}/restaurants/e11c98f-f852-4670-886d-fece05da2099/menu| 400 | 500 | FALL|
+|f68e04 |restaurant menu token missing | POST/{{baseUrl}}/restaurants/e1c1c98f-f852-4670-886d-fece05da2099/menu| 401 | 401 | PASS|
 
 
 
