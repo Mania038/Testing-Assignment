@@ -65,6 +65,7 @@ The testing included:
 | Environment | [Panda-Lite - D2] |
 | API Type | REST API |
 | Authentication | Bearer Token |
+| Headers | Personal key |
 
 # 4. Test Cases
 
