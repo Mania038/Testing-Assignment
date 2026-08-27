@@ -73,7 +73,7 @@ The testing included:
 
 | Test Case ID | Test Case | Endpoint | Expected Status | Actual Status | Verdict |
 |---|---|---|---:|---:|---|
-| TC-01 | [WRITE HERE] | [WRITE HERE] | [ ] | [ ] | [PASS/FAIL] |
+| TC-01 | [Register User Already Exists] | [post/auth/register] | [409] | [409 ] | [PASS] |
 | TC-02 | [WRITE HERE] | [WRITE HERE] | [ ] | [ ] | [PASS/FAIL] |
 | TC-03 | [WRITE HERE] | [WRITE HERE] | [ ] | [ ] | [PASS/FAIL] |
 
