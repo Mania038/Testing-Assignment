@@ -143,9 +143,11 @@ The testing included:
 |b783d9 |restaurant not found | POST/{{baseUrl}}/restaurants/e1c1c98f-f852-4670-886d-fece05da2090/menu| 404 | 404 | PASS|
 |1146f8 |restaurant miss name & price | POST/{{baseUrl}}/restaurants/e1c1c98f-f852-4670-886d-fece05da2099/menu| 400 | 400 | PASS|
 |5e43af |restaurant neg price | POST/{{baseUrl}}/restaurants/e1c1c98f-f852-4670-886d-fece05da2099/menu| 400 | 400 | PASS|
-
-
-
+|ac8dc3 |restaurant menu item | PATCH/{{baseUrl}}/menu-items/a64abeee-824d-48eb-8668-9b7fe1a43c5e| 200 | 200 | PASS|
+|600535 |restaurant menu token missing | PATCH/{{baseUrl}}/menu-items/a64abeee-824d-48eb-8668-9b7fe1a43c5e| 401 | 401 | PASS|
+|d4bf85 |restaurant not found | PATCH/{{baseUrl}}/menu-items/a64abeee-824d-48eb-8668-9b7fe1a43c6e| 404 | 404 | PASS|
+|48522c |restaurant not match owner id | PATCH/{{baseUrl}}/menu-items/a64abeee-824d-48eb-8668-9b7fe1a43c5e| 401 | 401 | PASS|
+|43d62d |restaurant neg value | PATCH/{{baseUrl}}/menu-items/a64abeee-824d-48eb-8668-9b7fe1a43c5e| 401 | 500 | FAIL |
 
 
 
