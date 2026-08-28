@@ -140,6 +140,9 @@ The testing included:
 |6366c2 |missing token | POST/{{baseUrl}}/orders/c3969e61-5e30-4bb9-a711-6e586ee00c7b/rate| 401 | 401 | PASS|
 |df9e39 |restaurant menu id BUG | POST/{{baseUrl}}/restaurants/e11c98f-f852-4670-886d-fece05da2099/menu| 400 | 500 | FALL|
 |f68e04 |restaurant menu token missing | POST/{{baseUrl}}/restaurants/e1c1c98f-f852-4670-886d-fece05da2099/menu| 401 | 401 | PASS|
+|b783d9 |restaurant not found | POST/{{baseUrl}}/restaurants/e1c1c98f-f852-4670-886d-fece05da2090/menu| 404 | 404 | PASS|
+|1146f8 |restaurant miss name & price | POST/{{baseUrl}}/restaurants/e1c1c98f-f852-4670-886d-fece05da2099/menu| 400 | 400 | PASS|
+|5e43af |restaurant neg price | POST/{{baseUrl}}/restaurants/e1c1c98f-f852-4670-886d-fece05da2099/menu| 400 | 400 | PASS|
 
 
 
