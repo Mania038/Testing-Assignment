@@ -205,4 +205,4 @@ The API returns a 500 Internal Server Error when the restaurant menu ID scenario
 
 **Evidence:**
 
-![BUG-03](screenshots/787768942_1779461973353754_6110804985298714641_n.jpg)
+![BUG-03](screenshots/Screenshot 2026-08-29 235044.png)
