@@ -149,6 +149,7 @@ The testing included:
 |48522c |restaurant not match owner id | PATCH/{{baseUrl}}/menu-items/a64abeee-824d-48eb-8668-9b7fe1a43c5e| 401 | 401 | PASS|
 |43d62d |restaurant neg value BUG | PATCH/{{baseUrl}}/menu-items/a64abeee-824d-48eb-8668-9b7fe1a43c5e| 400 | 500 | FAIL |
 |85c2ee |Register duplicate email with different capitalization | POST/{{baseUrl}}/auth/register | 409 | 409 | PASS |
+| 157f11 | Restaurant name empty | PATCH/{{baseUrl}}/restaurants/e1c1c98f-f852-4670-886d-fece05da2099 | 409 | 200 | FAIL |
 
 
 
