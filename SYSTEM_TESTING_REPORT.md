@@ -193,3 +193,16 @@ The API returns a 500 Internal Server Error when the restaurant menu ID scenario
 **Evidence:**
 
 ![BUG-01 Restaurant Menu Invalid Negative Value](screenshots/783075988_1580087940580142_5670537372856015347_n.jpg)
+### BUG-03  — Restaurant Name Can Be Set to Empty String
+
+**Endpoint:** PATCH `{{baseUrl}}/restaurants/{restaurantId}`
+
+**Expected Result:** The API should reject an empty restaurant name with a proper 4xx validation error.
+
+**Actual Result:** The API returned `200 OK` and accepted the empty restaurant name.
+
+**Verdict:** FAIL
+
+**Evidence:**
+
+![BUG-02 Restaurant Empty Name](screenshots/BUG-02.png)
