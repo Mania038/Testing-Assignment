@@ -148,129 +148,32 @@ The testing included:
 |d4bf85 |restaurant not found | PATCH/{{baseUrl}}/menu-items/a64abeee-824d-48eb-8668-9b7fe1a43c6e| 404 | 404 | PASS|
 |48522c |restaurant not match owner id | PATCH/{{baseUrl}}/menu-items/a64abeee-824d-48eb-8668-9b7fe1a43c5e| 401 | 401 | PASS|
 |43d62d |restaurant neg value BUG | PATCH/{{baseUrl}}/menu-items/a64abeee-824d-48eb-8668-9b7fe1a43c5e| 400 | 500 | FAIL |
+|85c2ee |Register duplicate email with different capitalization | POST/{{baseUrl}}/auth/register | 409 | 409 | PASS |
 
 
 
 
 
 
+## 3. Bug List
 
+### BUG-01 — Restaurant Menu ID Issue
 
+**Test Case ID:** fd9e39
 
+**Module:** Restaurant
 
-## 4.2 Detailed Test Cases
+**Endpoint:** PATCH /restaurants/:id/menu
 
-### TC-01 — Register New User
+**Expected Status:** 201
 
-**Endpoint:** `POST /{{baseUrl}}/auth/register`
+**Actual Status:** 500
 
-**Purpose:** Verify that a new user can be registered successfully.
+**Verdict:** FAIL
 
-**Test Data:**
-- Valid name
-- Valid email
-- Valid password
-- Valid user type
+**Description:**  
+The API returns a 500 Internal Server Error when the restaurant menu ID scenario is tested, while the expected response is 201.
 
-**Steps:**
-1. Open the Register User request in Postman.
-2. Enter valid registration data.
-3. Send the request.
-4. Check the response status and response body.
+**Evidence:**
 
-**Expected Result:**
-- Status code: `200`
-- User registration should be successful.
-
-**Actual Result:**
-- Status code: `200`
-- Request was processed successfully.
-
-**Verdict:** PASS
-
-**Evidence:**  
-![TC-01 Register New User](screenshots/TC-01.png)
-
----
-
-### TC-02 — Register User Already Exists
-
-**Endpoint:** `POST /{{baseUrl}}/auth/register`
-
-**Purpose:** Verify that the system rejects registration when the email already exists.
-
-**Steps:**
-1. Open the Register User request.
-2. Use an email that is already registered.
-3. Send the request.
-4. Check the response.
-
-**Expected Result:**
-- Status code: `409`
-- Error should indicate that the email is already in use.
-
-**Actual Result:**
-- Status code: `409`
-- Error message: `Email already in use`
-
-**Verdict:** PASS
-
-**Evidence:**  
-![TC-02 Register User Already Exists](screenshots/TC-02.png)
-
----
-
-### TC-03 — Register User Type
-
-**Endpoint:** `POST /{{baseUrl}}/auth/register`
-
-**Purpose:** Verify that the system validates the user type.
-
-**Expected Result:**
-- Status code: `400`
-
-**Actual Result:**
-- Status code: `400`
-
-**Verdict:** PASS
-
-**Evidence:**  
-![TC-03 Register User Type](screenshots/TC-03.png)
-
----
-
-### TC-04 — Register User Role Remove
-
-**Endpoint:** `POST /{{baseUrl}}/auth/register`
-
-**Purpose:** Verify the registration request when the required role information is removed.
-
-**Expected Result:**
-- Status code: `400`
-
-**Actual Result:**
-- Status code: `400`
-
-**Verdict:** PASS
-
-**Evidence:**  
-![TC-04 Register User Role Remove](screenshots/TC-04.png)
-
----
-
-### TC-05 — Register User Password Short
-
-**Endpoint:** `POST /{{baseUrl}}/auth/register`
-
-**Purpose:** Verify that the system rejects a password that is too short.
-
-**Expected Result:**
-- Status code: `400`
-
-**Actual Result:**
-- Status code: `400`
-
-**Verdict:** PASS
-
-**Evidence:**  
-![TC-05 Register User Password Short](screenshots/TC-05.png)
+![BUG-01](screenshots/BUG-01.png)
