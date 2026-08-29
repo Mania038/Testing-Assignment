@@ -177,3 +177,18 @@ The API returns a 500 Internal Server Error when the restaurant menu ID scenario
 **Evidence:**
 
 ![BUG-01](screenshots/787768942_1779461973353754_6110804985298714641_n.jpg)
+
+
+### BUG-02 — Restaurant Menu Invalid Negative Value
+
+**Endpoint:** PATCH `{{baseUrl}}/menu-items/{menuItemId}`
+
+**Expected Result:** The API should reject the invalid negative value with a proper 4xx validation error.
+
+**Actual Result:** The API returned `500 Internal Server Error`.
+
+**Verdict:** FAIL
+
+**Evidence:**
+
+![BUG-01 Restaurant Menu Invalid Negative Value](screenshots/BUG-01.png)
