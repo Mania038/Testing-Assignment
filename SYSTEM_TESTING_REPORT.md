@@ -191,4 +191,4 @@ The API returns a 500 Internal Server Error when the restaurant menu ID scenario
 
 **Evidence:**
 
-![BUG-01 Restaurant Menu Invalid Negative Value](screenshots/BUG-01.png)
+![BUG-01 Restaurant Menu Invalid Negative Value](screenshots/783075988_1580087940580142_5670537372856015347_n.jpg)
