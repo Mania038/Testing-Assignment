@@ -150,6 +150,11 @@ The testing included:
 |43d62d |restaurant neg value BUG | PATCH/{{baseUrl}}/menu-items/a64abeee-824d-48eb-8668-9b7fe1a43c5e| 400 | 500 | FAIL |
 |85c2ee |Register duplicate email with different capitalization | POST/{{baseUrl}}/auth/register | 409 | 409 | PASS |
 | 157f11 | Restaurant name empty | PATCH/{{baseUrl}}/restaurants/e1c1c98f-f852-4670-886d-fece05da2099 | 409 | 200 | FAIL |
+|43eec6|order available| GET/{{baseUrl}}/orders/available| 200 | 200 | PASS|
+|09395e|order not found| PATCH/{{baseUrl}} /orders/7064cf47-deee-42df-b96c-eb859b9f6254/claim| 404 | 404 | PASS|
+|088af7|order missing| PATCH/{{baseUrl}} /orders/7064cf47-deee-42df-b96c-eb859b9f6254/claim| 401 | 401 | PASS|
+|15d3a1|missing token order available| GET/{{baseUrl}}/orders/available| 401 | 401 | PASS|
+
 
 
 
