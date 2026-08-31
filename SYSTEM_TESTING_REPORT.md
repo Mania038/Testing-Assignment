@@ -169,16 +169,16 @@ The testing included:
 | ID | Test Case | Endpoint | Expected | Actual | Result |
 |---|---|---|---:|---:|:---:|
 |0b6909 | Restaurant name returns null | PATCH/{{baseUrl}}/restaurants/e1c1c98f-f852-4670-886d-fece05da2099 | Restaurant name should be valid | `name: null` | FAIL |
-| ede4ea | Customer can view another customer's order | `GET/{{baseUrl}}/orders/bc09c37e-661c-4794-93cb-4c806835f733| 403/404 | 200 | FAIL |
-| `order-bug-03` | Restaurant owner can order from own restaurant | `POST /orders` | 403 | 201 | FAIL |
-| `order-bug-04` | Same order can be claimed by 2 riders | `PATCH /orders/{id}/claim` | Second claim rejected | 200 | FAIL |
-| `order-bug-05` | Same order can be picked up by 2 riders | `PATCH /orders/{id}/status` | Second pickup rejected | 200 | FAIL |
-| `order-bug-06` | Same order can be delivered by 2 riders | `PATCH /orders/{id}/status` | Second delivery rejected | 200 | FAIL |
-| `order-bug-07` | Delivery message sent more than once | Order delivery flow | One delivery message | Multiple messages sent | FAIL |
-| `order-bug-08` | Order can go from placed to preparing | `PATCH /orders/{id}/status` | 400 | 200 | FAIL |
-| `order-bug-09` | Order can become ready without proper acceptance/preparation | `PATCH /orders/{id}/status` | 400 | 200 | FAIL |
-| `order-bug-10` | Rider can pick up order without proper lifecycle | `PATCH /orders/{id}/status` | 400 | 200 | FAIL |
-| `order-bug-11` | Rider can deliver order without pickup | `PATCH /orders/{id}/status` | 400 | 200 | FAIL |
+| ede4ea | Customer can view another customer's order | `GET/{{baseUrl}}/orders/bc09c37e-661c-4794-93cb-4c806835f733| 404 | 200 | FAIL |
+| f792a3| Restaurant owner can order from own restaurant | `POST/{{baseUrl}}/orders | 403 | 201 | FAIL |
+| fd0bc2 | Same order can be claimed by 2 riders | {{baseUrl}}/orders/{bc09c37e-661c-4794-93cb-4c806835f733}/claim | Second claim rejected | 200 | FAIL |
+|ea616a  | Same order can be picked up by 2 riders |{{baseUrl}}/orders/{bc09c37e-661c-4794-93cb-4c806835f733}/status | Second pickup rejected | 200 | FAIL |
+| 8223ef | Same order can be delivered by 2 riders |{{baseUrl}}/orders/{bc09c37e-661c-4794-93cb-4c806835f733}/status | Second delivery rejected | 200 | FAIL |
+| 148a6f | Delivery message sent more than once | {{baseUrl}}/orders/{bd0471f6-eda3-4c5b-8711-8d6f57cf776b}/status | One delivery message | Multiple messages sent | FAIL |
+|  9b271b| Order can go from placed to preparing |{{baseUrl}}/orders/{bd0471f6-eda3-4c5b-8711-8d6f57cf776b}/status| 400 | 200 | FAIL |
+|  9b271b| Order can become ready without proper acceptance/preparation |{{baseUrl}}/orders/{bd0471f6-eda3-4c5b-8711-8d6f57cf776b}/status| 400 | 200 | FAIL |
+| ea616a | Rider can pick up order without proper lifecycle | `{{baseUrl}}/orders/{bc09c37e-661c-4794-93cb-4c806835f733}/status | 400 | 200 | FAIL |
+| 148a6f | Rider can deliver order without pickup |{{baseUrl}}/orders/{bd0471f6-eda3-4c5b-8711-8d6f57cf776b}/status | 400 | 200 | FAIL |
 
 ### BUG-01 — Restaurant Menu ID Issue
 
