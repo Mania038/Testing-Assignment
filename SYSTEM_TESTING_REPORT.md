@@ -203,29 +203,237 @@ The API returns `name: null` instead of a valid restaurant name.
 ![BUG-01](screenshots/Bug-1.jpg)
 
 
-### BUG-02 — Restaurant Menu Invalid Negative Value
+### BUG-02 — Customer Can View Another Customer's Order
 
-**Endpoint:** PATCH `{{baseUrl}}/menu-items/{menuItemId}`
+**Test Case ID:** ed4ea4
 
-**Expected Result:** The API should reject the invalid negative value with a proper 4xx validation error.
+**Module:** Orders
 
-**Actual Result:** The API returned `500 Internal Server Error`.
+**Endpoint:** GET /orders/:id
 
-**Verdict:** FAIL
+**Expected Status:** 404
 
-**Evidence:**
-
-![BUG-01 Restaurant Menu Invalid Negative Value](screenshots/783075988_1580087940580142_5670537372856015347_n.jpg)
-### BUG-03  — Restaurant Name Can Be Set to Empty String
-
-**Endpoint:** PATCH `{{baseUrl}}/restaurants/{restaurantId}`
-
-**Expected Result:** The API should reject an empty restaurant name with a proper 4xx validation error.
-
-**Actual Result:** The API returned `200 OK` and accepted the empty restaurant name.
+**Actual Status:** 200
 
 **Verdict:** FAIL
 
+**Description:**
+
+A customer can view another customer's order.
+
 **Evidence:**
 
-![BUG-03](screenshots/Screenshot 2026-08-29 235044.png)
+![BUG-02](screenshots/BUG-02.png)
+### BUG-03 — Restaurant Owner Can Order From Own Restaurant
+
+**Test Case ID:** f792a3
+
+**Module:** Orders
+
+**Endpoint:** POST /orders
+
+**Expected Status:** 403
+
+**Actual Status:** 201
+
+**Verdict:** FAIL
+
+**Description:**
+
+A restaurant owner can place an order from their own restaurant.
+
+**Evidence:**
+
+![BUG-03](screenshots/BUG-03.png)
+### BUG-04 — Same Order Can Be Claimed by Two Riders
+
+**Test Case ID:** fd0bc2
+
+**Module:** Orders / Rider
+
+**Endpoint:** POST /orders/:id/claim
+
+**Expected Status:** Second claim rejected
+
+**Actual Status:** 200
+
+**Verdict:** FAIL
+
+**Description:**
+
+The same order can be claimed by two different riders.
+
+**Evidence:**
+
+![BUG-04](screenshots/BUG-04.png)
+### BUG-05 — Same Order Can Be Picked Up by Two Riders
+
+**Test Case ID:** ea616a
+
+**Module:** Orders / Rider
+
+**Endpoint:** PATCH /orders/:id/status
+
+**Expected Status:** Second pickup rejected
+
+**Actual Status:** 200
+
+**Verdict:** FAIL
+
+**Description:**
+
+The same order can be picked up by two different riders.
+
+**Evidence:**
+
+![BUG-05](screenshots/BUG-05.png)
+### BUG-06 — Same Order Can Be Delivered by Two Riders
+
+**Test Case ID:** 823ef
+
+**Module:** Orders / Rider
+
+**Endpoint:** PATCH /orders/:id/status
+
+**Expected Status:** Second delivery rejected
+
+**Actual Status:** 200
+
+**Verdict:** FAIL
+
+**Description:**
+
+The same order can be delivered by two different riders.
+
+**Evidence:**
+
+![BUG-06](screenshots/BUG-06.png)
+### BUG-07 — Delivery Message Sent More Than Once
+
+**Test Case ID:** 148a6f
+
+**Module:** Orders / Delivery
+
+**Endpoint:** PATCH /orders/:id/status
+
+**Expected Status:** One delivery message
+
+**Actual Status:** Multiple messages
+
+**Verdict:** FAIL
+
+**Description:**
+
+The system sends multiple delivery messages for the same order.
+
+**Evidence:**
+
+![BUG-07](screenshots/BUG-07.png)
+### BUG-08 — Order Can Move to Preparing Without Acceptance
+
+**Test Case ID:** 92b71b
+
+**Module:** Orders / Restaurant
+
+**Endpoint:** PATCH /orders/:id/status
+
+**Expected Status:** 400
+
+**Actual Status:** 200
+
+**Verdict:** FAIL
+
+**Description:**
+
+An order can move from `placed` to `preparing` without restaurant acceptance.
+
+**Evidence:**
+
+![BUG-08](screenshots/BUG-08.png)
+### BUG-09 — Order Can Become Ready Without Proper Acceptance
+
+**Test Case ID:** 92b71b
+
+**Module:** Orders / Restaurant
+
+**Endpoint:** PATCH /orders/:id/status
+
+**Expected Status:** 400
+
+**Actual Status:** 200
+
+**Verdict:** FAIL
+
+**Description:**
+
+An order can become `ready_for_pickup` without proper acceptance and preparation.
+
+**Evidence:**
+
+![BUG-09](screenshots/BUG-09.png)
+
+### BUG-10 — Rider Can Pick Up Order Without Proper Lifecycle
+
+**Test Case ID:** ea616a
+
+**Module:** Orders / Rider
+
+**Endpoint:** PATCH /orders/:id/status
+
+**Expected Status:** 400
+
+**Actual Status:** 200
+
+**Verdict:** FAIL
+
+**Description:**
+
+A rider can pick up an order without following the required order lifecycle.
+
+**Evidence:**
+
+![BUG-10](screenshots/BUG-10.png)
+
+### BUG-11 — Rider Can Deliver Order Without Pickup
+
+**Test Case ID:** 148a6f
+
+**Module:** Orders / Rider
+
+**Endpoint:** PATCH /orders/:id/status
+
+**Expected Status:** 400
+
+**Actual Status:** 200
+
+**Verdict:** FAIL
+
+**Description:**
+
+A rider can deliver an order without first picking up the order.
+
+**Evidence:**
+
+![BUG-11](screenshots/BUG-11.png)
+
+### BUG-12 — Email Registration Is Case-Sensitive
+
+**Test Case ID:** 85c2e9
+
+**Module:** Authentication / Registration
+
+**Endpoint:** POST /auth/register
+
+**Expected Status:** 409
+
+**Actual Status:** 200
+
+**Verdict:** FAIL
+
+**Description:**
+
+The system allows registration using the same email with different capitalization.
+
+**Evidence:**
+
+![BUG-12](screenshots/BUG-12.png)
