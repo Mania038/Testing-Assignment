@@ -163,6 +163,23 @@ The testing included:
 
 ## 3. Bug List
 
+
+## Order Bugs / Failed Test Results
+
+| ID | Test Case | Endpoint | Expected | Actual | Result |
+|---|---|---|---:|---:|:---:|
+| `order-bug-01` | Restaurant name returns null | `GET /restaurants/{id}` | Restaurant name should be valid | `name: null` | FAIL |
+| `order-bug-02` | Customer can view another customer's order | `GET /orders/{id}` | 403/404 | 200 | FAIL |
+| `order-bug-03` | Restaurant owner can order from own restaurant | `POST /orders` | 403 | 201 | FAIL |
+| `order-bug-04` | Same order can be claimed by 2 riders | `PATCH /orders/{id}/claim` | Second claim rejected | 200 | FAIL |
+| `order-bug-05` | Same order can be picked up by 2 riders | `PATCH /orders/{id}/status` | Second pickup rejected | 200 | FAIL |
+| `order-bug-06` | Same order can be delivered by 2 riders | `PATCH /orders/{id}/status` | Second delivery rejected | 200 | FAIL |
+| `order-bug-07` | Delivery message sent more than once | Order delivery flow | One delivery message | Multiple messages sent | FAIL |
+| `order-bug-08` | Order can go from placed to preparing | `PATCH /orders/{id}/status` | 400 | 200 | FAIL |
+| `order-bug-09` | Order can become ready without proper acceptance/preparation | `PATCH /orders/{id}/status` | 400 | 200 | FAIL |
+| `order-bug-10` | Rider can pick up order without proper lifecycle | `PATCH /orders/{id}/status` | 400 | 200 | FAIL |
+| `order-bug-11` | Rider can deliver order without pickup | `PATCH /orders/{id}/status` | 400 | 200 | FAIL |
+
 ### BUG-01 — Restaurant Menu ID Issue
 
 **Test Case ID:** fd9e39
