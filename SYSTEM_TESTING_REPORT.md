@@ -180,26 +180,27 @@ The testing included:
 | ea616a | Rider can pick up order without proper lifecycle | `{{baseUrl}}/orders/{bc09c37e-661c-4794-93cb-4c806835f733}/status | 400 | 200 | FAIL |
 | 148a6f | Rider can deliver order without pickup |{{baseUrl}}/orders/{bd0471f6-eda3-4c5b-8711-8d6f57cf776b}/status | 400 | 200 | FAIL |
 
-### BUG-01 — Restaurant Menu ID Issue
+### BUG-01 — Restaurant Name Returns Null
 
-**Test Case ID:** fd9e39
+**Test Case ID:** 0b6909
 
 **Module:** Restaurant
 
-**Endpoint:** PATCH /restaurants/:id/menu
+**Endpoint:** PATCH /restaurants/:id
 
-**Expected Status:** 201
+**Expected Status:** 200
 
-**Actual Status:** 500
+**Actual Status:** 200
 
 **Verdict:** FAIL
 
-**Description:**  
-The API returns a 500 Internal Server Error when the restaurant menu ID scenario is tested, while the expected response is 201.
+**Description:**
+
+The API returns `name: null` instead of a valid restaurant name.
 
 **Evidence:**
 
-![BUG-01](screenshots/787768942_1779461973353754_6110804985298714641_n.jpg)
+![BUG-01](screenshots/BUG-01.png)
 
 
 ### BUG-02 — Restaurant Menu Invalid Negative Value
