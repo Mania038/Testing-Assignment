@@ -286,7 +286,7 @@ The same order can be picked up by two different riders.
 
 **Evidence:**
 
-![BUG-05](screenshots/BUG-05.png)
+![BUG-05](screenshots/Bug-5.jpg)
 ### BUG-06 — Same Order Can Be Delivered by Two Riders
 
 **Test Case ID:** 823ef
@@ -307,7 +307,7 @@ The same order can be delivered by two different riders.
 
 **Evidence:**
 
-![BUG-06](screenshots/BUG-06.png)
+![BUG-06](screenshots/Bug-6.jpg)
 ### BUG-07 — Delivery Message Sent More Than Once
 
 **Test Case ID:** 148a6f
@@ -328,7 +328,7 @@ The system sends multiple delivery messages for the same order.
 
 **Evidence:**
 
-![BUG-07](screenshots/BUG-07.png)
+![BUG-07](screenshots/Bug-6.jpg)
 ### BUG-08 — Order Can Move to Preparing Without Acceptance
 
 **Test Case ID:** 92b71b
@@ -349,7 +349,7 @@ An order can move from `placed` to `preparing` without restaurant acceptance.
 
 **Evidence:**
 
-![BUG-08](screenshots/BUG-08.png)
+![BUG-08](screenshots/Bug-8.jpg)
 ### BUG-09 — Order Can Become Ready Without Proper Acceptance
 
 **Test Case ID:** 92b71b
@@ -370,7 +370,7 @@ An order can become `ready_for_pickup` without proper acceptance and preparation
 
 **Evidence:**
 
-![BUG-09](screenshots/BUG-09.png)
+![BUG-09](screenshots/Bug-9.jpg)
 
 ### BUG-10 — Rider Can Pick Up Order Without Proper Lifecycle
 
@@ -392,7 +392,7 @@ A rider can pick up an order without following the required order lifecycle.
 
 **Evidence:**
 
-![BUG-10](screenshots/BUG-10.png)
+![BUG-10](screenshots/Bug-10.jpg)
 
 ### BUG-11 — Rider Can Deliver Order Without Pickup
 
@@ -414,7 +414,7 @@ A rider can deliver an order without first picking up the order.
 
 **Evidence:**
 
-![BUG-11](screenshots/BUG-11.png)
+![BUG-11]screenshots/Bug-11.jpg)
 
 ### BUG-12 — Email Registration Is Case-Sensitive
 
@@ -436,4 +436,4 @@ The system allows registration using the same email with different capitalizatio
 
 **Evidence:**
 
-![BUG-12](screenshots/BUG-12.png)
+![BUG-12](screenshots/Bug-12.jpg)
