@@ -168,8 +168,8 @@ The testing included:
 
 | ID | Test Case | Endpoint | Expected | Actual | Result |
 |---|---|---|---:|---:|:---:|
-| `order-bug-01` | Restaurant name returns null | `GET /restaurants/{id}` | Restaurant name should be valid | `name: null` | FAIL |
-| `order-bug-02` | Customer can view another customer's order | `GET /orders/{id}` | 403/404 | 200 | FAIL |
+|0b6909 | Restaurant name returns null | PATCH/{{baseUrl}}/restaurants/e1c1c98f-f852-4670-886d-fece05da2099 | Restaurant name should be valid | `name: null` | FAIL |
+| ede4ea | Customer can view another customer's order | `GET/{{baseUrl}}/orders/bc09c37e-661c-4794-93cb-4c806835f733| 403/404 | 200 | FAIL |
 | `order-bug-03` | Restaurant owner can order from own restaurant | `POST /orders` | 403 | 201 | FAIL |
 | `order-bug-04` | Same order can be claimed by 2 riders | `PATCH /orders/{id}/claim` | Second claim rejected | 200 | FAIL |
 | `order-bug-05` | Same order can be picked up by 2 riders | `PATCH /orders/{id}/status` | Second pickup rejected | 200 | FAIL |
