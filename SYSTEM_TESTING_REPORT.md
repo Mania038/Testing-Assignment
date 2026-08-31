@@ -200,7 +200,7 @@ The API returns `name: null` instead of a valid restaurant name.
 
 **Evidence:**
 
-![BUG-01](screenshots/BUG-01.png)
+![BUG-01](screenshots/Bug-1.jpg)
 
 
 ### BUG-02 — Restaurant Menu Invalid Negative Value
