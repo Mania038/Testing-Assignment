@@ -19,13 +19,16 @@
 | 3 | Sumaiya Islam Ety | 011212164 | Orders-Claim |
 | 4 | Joysree Bardhan | 011221189 | Restaruants-menu-item ,Id |
 
+
 ## 1.2 Individual Contribution
 
-**Name:** Mania Sultana
+**Mania Sultana:** Worked on Authentication, Restaurants, and Orders. Prepared and tested test cases for these modules. Identified several bugs, especially in Orders, and prepared the Bug List and bug reports.
 
-**Student ID:** 011212038
+**Taspia Akter:** Worked on Orders and Rating. Prepared and checked test cases and contributed to the test case listing and report preparation.
 
-**Assigned Module:** Rating API
+**Sumaiya Islam Ety:** Worked mainly on the Orders Claim part. Tested different order-claim scenarios and checked test cases to identify possible bugs.
+
+**Joyasree Bardhan:** Worked on Restaurants, Menu Items, and Restaurant ID validation. Tested restaurant creation, valid/invalid IDs, menu-item addition, and related test cases. Also prepared the report sections for these test cases.
 
 ### My Responsibilities
 
