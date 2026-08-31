@@ -244,7 +244,7 @@ A restaurant owner can place an order from their own restaurant.
 
 **Evidence:**
 
-![BUG-03](screenshots/BUG-03.png)
+![BUG-03](screenshots/Bug-3.jpg)
 ### BUG-04 — Same Order Can Be Claimed by Two Riders
 
 **Test Case ID:** fd0bc2
