@@ -265,7 +265,7 @@ The same order can be claimed by two different riders.
 
 **Evidence:**
 
-![BUG-04](screenshots/BUG-04.png)
+![BUG-04](screenshots/Bug-4.jpg)
 ### BUG-05 — Same Order Can Be Picked Up by Two Riders
 
 **Test Case ID:** ea616a
