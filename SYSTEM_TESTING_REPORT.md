@@ -58,6 +58,7 @@ The testing included:
 - Query parameter validation
 - Error response validation
 - Postman test scripts
+- Bug Finding 
 
 # 3. Test Environment
 
