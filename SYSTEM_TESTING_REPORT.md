@@ -436,4 +436,4 @@ The system allows registration using the same email with different capitalizatio
 
 **Evidence:**
 
-![BUG-12](screenshots/Bug-12.jpg)
+![BUG-12](screenshots/Bug-12.png)
