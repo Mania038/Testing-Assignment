@@ -414,7 +414,7 @@ A rider can deliver an order without first picking up the order.
 
 **Evidence:**
 
-![BUG-11]screenshots/Bug-11.jpg)
+![BUG-11](screenshots/Bug-10.jpg)
 
 ### BUG-12 — Email Registration Is Case-Sensitive
 
