@@ -223,7 +223,7 @@ A customer can view another customer's order.
 
 **Evidence:**
 
-![BUG-02](screenshots/BUG-02.png)
+![BUG-02](screenshots/Bug-2.jpg)
 ### BUG-03 — Restaurant Owner Can Order From Own Restaurant
 
 **Test Case ID:** f792a3
