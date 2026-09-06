@@ -441,3 +441,45 @@ The system allows registration using the same email with different capitalizatio
 **Evidence:**
 
 ![BUG-12](screenshots/Bug-12.png)
+### BUG-13 — restuarent menu id bug
+
+**Test Case ID:** df9e39
+
+**Module:** restuarent menu id 
+
+**Endpoint:** POST /{{baseUrl}}/restaurants/e11c98f-f852-4670-886d-fece05da2099/menu
+
+**Expected Status:** 201
+
+**Actual Status:** 500
+
+**Verdict:** FAIL
+
+**Description:**
+
+The system allows registration using the same email with different capitalization.
+
+**Evidence:**
+
+![BUG-13](screenshots/Bug-13.jpg)
+### BUG-14 — restuarent negative value bug
+
+**Test Case ID:** 43d62d
+
+**Module:** Authentication / Registration
+
+**Endpoint:** PATCH /{{baseUrl}}/menu-items/a64abeee-824d-48eb-8668-9b7fe1a43c5e
+
+**Expected Status:** 400
+
+**Actual Status:** 500
+
+**Verdict:** FAIL
+
+**Description:**
+
+The system allows registration using the same email with different capitalization.
+
+**Evidence:**
+
+![BUG-14](screenshots/Bug-14.jpg)
